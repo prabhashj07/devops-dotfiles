@@ -1,0 +1,55 @@
+# .dockerconfig
+
+[auths]
+    myregistry.example.com:
+        username: your_username
+        password: your_password
+
+[HttpHeaders]
+    User-Agent = Docker-Client
+
+[registries]
+    myregistry.example.com:
+        insecure: false
+
+[plugins]
+    plugins: {}
+
+[credHelpers]
+    myregistry.example.com: mycredhelper
+
+[proxies]
+    default:
+        httpProxy: http://proxy.example.com:8080
+        httpsProxy: http://proxy.example.com:8080
+        noProxy: localhost,127.0.0.1,.example.com
+
+# Authentication details for Docker registries
+[auths]
+    myregistry.example.com:
+        username: $DOCKER_USERNAME   # Use environment variable for username
+        password: $DOCKER_PASSWORD   # Use environment variable for password
+
+# HTTP headers for Docker requests
+[HttpHeaders]
+    User-Agent = Docker-Client
+
+# Registry configurations
+[registries]
+    myregistry.example.com:
+        insecure: false   # Configure registry as secure
+
+# Docker plugins (optional)
+[plugins]
+    plugins: {}
+
+# Credential helpers for Docker registries
+[credHelpers]
+    myregistry.example.com: mycredhelper   # Use a secure credential helper
+
+# Proxy settings for Docker
+[proxies]
+    default:
+        httpProxy: http://proxy.example.com:8080
+        httpsProxy: http://proxy.example.com:8080
+        noProxy: localhost,127.0.0.1,.example.com
