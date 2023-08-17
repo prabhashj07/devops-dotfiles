@@ -1,0 +1,27 @@
+# .gitignore
+
+# Ignore system and editor files
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ignore compiled binaries and build artifacts
+bin/
+dist/
+build/
+
+# Ignore local environment files
+.env
+*.env
+
+# Ignore package lock files
+npm-shrinkwrap.json
+yarn.lock
+
+# Ignore Docker build artifacts
+.DS_Store
+*.dockerignore
+Dockerfile*
+!Dockerfile.*
