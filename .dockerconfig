@@ -1,4 +1,6 @@
-# .dockerconfig
+# .dockerconfig 
+; Language: INI
+
 
 [auths]
     myregistry.example.com:
