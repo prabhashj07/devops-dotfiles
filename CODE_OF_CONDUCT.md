@@ -28,7 +28,7 @@ Respect the privacy and confidentiality of other community members. Do not share
 
 ## Reporting Violations
 
-If you witness or experience behavior that violates this Code of Conduct, please promptly report it by contacting the project maintainers at [prabhashj07@gmail.com]. All reports will be kept confidential, and appropriate actions will be taken.
+If you witness or experience behavior that violates this Code of Conduct, please promptly report it by contacting the project maintainers at [email](prabhashj07@gmail.com). All reports will be kept confidential, and appropriate actions will be taken.
 
 By participating in the `docker-k8s-dotfiles` community, you agree to abide by this Code of Conduct. Violations of this Code of Conduct may result in temporary or permanent exclusion from the community, as determined by the project maintainers.
 
