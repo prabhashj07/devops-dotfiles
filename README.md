@@ -9,7 +9,7 @@ Hey there, fellow coder! Welcome to the Docker and Kubernetes Dotfiles party �
 - **.bashrc**: Customization station! ✨ Load up your shell with aliases, shortcuts, and a bit of extra pizzazz for Docker and Kubernetes commands.
 - **bin/**: Utilities to the rescue 🦸‍♂️! Find handy scripts here for Docker and Kubernetes tasks that'll save you time and make you look super pro.
 - **k8s-manifests/**: Our magical scrolls 📜. Check out these Kubernetes manifests to conjure deployments, services, and more!
-- **go-scripts/**: Enchanted scripts in Go ✨. Delve into the world of Go with utilities for Docker, Kubernetes, and more!
+- **go-scripts/**: Enchanted scripts in Go ✨. Delve into the world of Go with utilities for Docker, Kubernetes, and more.
 
 ## Getting Started 🚀
 
@@ -19,26 +19,37 @@ Hey there, fellow coder! Welcome to the Docker and Kubernetes Dotfiles party �
 4. Wave your wand over the utility scripts in `bin/` and `go-scripts/` to amaze your friends and coworkers.
 5. Unleash Kubernetes resources using the `k8s-manifests/` spells.
 
-## Your Magical Journey ✨
+### Generating Kubernetes Manifests
 
-- Sprinkle some Docker magic 🪄 with `.dockerconfig`.
-- Cast Kubernetes spells 🪄 with `.kubeconfig`.
-- Add a touch of you to your shell 🪄 with `.bashrc`.
-- Summon script superheroes 🦸‍♂️ from the `bin/` and `go-scripts/` Batcaves.
-- Unveil the power of K8s resources 🧙‍♂️ with `k8s-manifests/`.
+To generate Kubernetes manifests for your application, follow these steps:
 
-## Personal Touch 🎨
+1. **Save the Script**: Save the `generate-k8s-manifests.lua` script from the root of this repository.
 
-Feel free to make this magical kingdom truly yours! ✨ Tweak and twist the configs, sprinkle some extra spells in the scripts, and create new enchanting manifests in `k8s-manifests/` and `go-scripts/`.
+2. **Navigate to Script Directory**: Open a terminal and navigate to the directory containing the script:
 
-## How to Run Scripts 🏃‍♀️
+   ```sh
+   cd /path/to/your/repository
+3. **Run the Script**: Execute the script using the Lua interpreter:
+   ```sh
+   lua generate-k8s-manifests.lua
 
-Instructions for running scripts can be found in the respective script files. For example, to generate Kubernetes manifests, refer to the `generate-k8s-manifests.lua` script in the root directory.
+The script will generate Kubernetes YAML manifests for different deployment environments and print them to the console.
 
-## License
+4. **Copy and Save YAML**: Copy the generated YAML content for the desired environment(s) and save it as separate files in the k8s-manifests/ directory of this repository.
 
-The magic of this repository is licensed under the [MIT License](LICENSE). Do your thing with the code, but remember, with great power comes great responsibility! 🦸‍♂️
+5. **Apply Manifests**: Use kubectl to apply the generated manifests to your Kubernetes cluster:
+    ```sh
+    kubectl apply -f k8s-manifests/
 
----
+Make sure to customize the YAML files as needed before applying them to your cluster.
 
-Go forth and conquer the container realm, brave coder! 🌟🚀
+Feel free to customize the script's parameters and the environments table to match your application's deployment scenarios.
+
+### Contributing Guidelines
+
+If you're open to contributions from the community, consider adding a CONTRIBUTING.md file that outlines guidelines for submitting pull requests, reporting issues, and contributing to the project.
+
+### License
+
+The magic of this repository is licensed under the MIT License. Do your thing with the code, but remember, with great power comes great responsibility! 🦸‍♂️
+
